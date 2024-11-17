@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "ListsFont", sans-serif;
+}
+
+@font-face {
+    font-family: "NameHeadingFont";
+    src: url(fonts/OldComputerSt-rGM7.ttf);
+}
+
+@font-face {
+    font-family: "ListsFont";
+    src: url(fonts/Swansea-q3pd.ttf);
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #c7c7c7;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #5b5b5b;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+h1 {
+    color: #ff9c40;
+    margin-bottom: 10px;
+    font-family: "NameHeadingFont", sans-serif;
+}
+
+nav a {
+    color: #ffffff;
+    margin: 0 15px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f58403;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 40px 0;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+    color: #f0ac46;
+    margin-bottom: 10px;
+}
+
+.project {
+    margin: 20px 0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    border-bottom: 2px solid #ffbc40;
+}
+
+.project:hover {
+    transform: scale(1.02);
+}
+
+.experience {
+    margin: 20px 0;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    border-color: #ffffff;
+}
+
+button {
+    background-color: #131313;
+    color: #ffffff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #3d3d3d;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e1e1e;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
