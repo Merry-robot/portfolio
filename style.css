@@ -100,19 +100,7 @@ input:focus, textarea:focus {
     border-color: #ffffff;
 }
 
-button {
-    background-color: #131313;
-    color: #ffffff;
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-button:hover {
-    background-color: #3d3d3d;
-}
 
 footer {
     text-align: center;
