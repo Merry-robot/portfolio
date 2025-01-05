@@ -6,43 +6,59 @@
     <title>JY's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <script href="main.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <h1>Elijah Jubrey</h1>
-        <nav>
-            <a>Portfolio</a>
-        </nav>
     </header>
 
     <main>
         <section id="intro">
-            <h2>Welcome to My Portfolio</h2>
+            <h2 id="hero-text">Welcome! I'm <span class="dynamic-text">Elijah Jubrey</span></h2>
             <p>My name is Elijah, and I am a hobbyist programmer and a hobbyist Air Traffic Controller.</p>
         </section>
 
 
       <section>
+    
             <h2>Experience</h2>
             <div class="experience">
                 <h3>Paragon Robotics 571</h3>
                 <p>Veteran of 3 years and programmer for Paragon Robotics. I work on updating the team's website and the overall programming of the robot.</br>
                    We primarily use Java for the programming of the robot.</p> 
-            </div>
+            </div> 
             <h2>Skills</h2>
             <ul>
                 <li>Programming Languages: Python, Java, HTML/CSS</li>
                 <li>Tools: Git, Github</li>
                 <li>Familiarity with Linux servers and distros</li> 
             </ul>
+            <aside id="sidebar">
+                <h2>Projects</h2>
+                <div class="project-item">
+                    <h3>Paragon Robotics Website</h3>
+                    <p>I update and maintaine our team's website.</p>
+                    <a href="https://paragonrobotics.org" class="project-link" target="_blank">Learn More</a>
+                </div>
+                <div class="project-item">
+                    <h3>LocalSim</h3>
+                    <p>A Java-based GUI application to simualte controlling air traffic in a tower environment.</p>
+                    <a>Currently closed source.</a>
+                </div>
+            </aside>
+            
+            
+            
         </section>
     
 
     
         <section id="contact">
-            <h2>Information</h2>
-            You can contact me at elijahjubrey@gmail.com</br>
-            My github is "merry-robot".
+            <h2>Contact Me</h2>
+            <p><i class="fas fa-envelope"></i> elijahjubrey@gmail.com</p>
+            <p><i class="fab fa-github"></i> <a href="https://github.com/merry-robot" target="_blank">merry-robot</a></p>
+        </section>        
     </main>
 
     <footer>

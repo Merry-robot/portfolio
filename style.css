@@ -1,8 +1,10 @@
+/* Universal Reset & Font Styling */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "ListsFont", sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling for better navigation */
 }
 
 @font-face {
@@ -15,6 +17,7 @@
     src: url(fonts/Swansea-q3pd.ttf);
 }
 
+/* Body Styling */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #000000;
@@ -22,6 +25,7 @@ body {
     line-height: 1.6;
 }
 
+/* Header Styling */
 header {
     background-color: #5b5b5b;
     padding: 20px;
@@ -48,10 +52,13 @@ nav a:hover {
     color: #f58403;
 }
 
+/* Main Content Styling */
 main {
     padding: 20px;
+    margin-left: 270px; /* Adjust for sidebar */
 }
 
+/* Section Styling */
 section {
     margin: 40px 0;
     padding: 20px;
@@ -65,6 +72,7 @@ h2 {
     margin-bottom: 10px;
 }
 
+/* Project Cards Styling */
 .project {
     margin: 20px 0;
     border-radius: 8px;
@@ -81,10 +89,12 @@ h2 {
     transform: scale(1.02);
 }
 
+/* Experience Section Styling */
 .experience {
     margin: 20px 0;
 }
 
+/* Form Input & Textarea Styling */
 input, textarea {
     width: 100%;
     padding: 15px;
@@ -100,13 +110,110 @@ input:focus, textarea:focus {
     border-color: #ffffff;
 }
 
-
-
+/* Footer Styling */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1e1e1e;
+    background-color: #000000;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Sidebar Styling - Overlapping Everything */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    z-index: 1000; /* Ensure it overlaps everything */
+}
+
+/* Main Content Adjustment to Prevent Overlap */
+main {
+    padding: 20px;
+}
+
+/* Sidebar Links Styling for Clarity */
+#sidebar h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff9c40;
+}
+
+.project-item {
+    margin-bottom: 20px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adjust Header to Not Interfere with Sidebar */
+header {
+    margin-left: 250px;
+}
+
+/* Footer Adjustment for Sidebar */
+footer {
+    margin-left: 250px;
+}
+
+/* Prevent Horizontal Scrolling */
+body, html {
+    overflow-x: hidden;
+}
+
+/* Sidebar Fix */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #1e1e1e;
+    color: #ffffff;
+    padding: 20px;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+/* Main Content Adjustment */
+main {
+    padding: 20px;
+    margin-left: 250px;
+    max-width: calc(100% - 250px);
+}
+
+/* Header Adjustment */
+header {
+    margin-left: 250px;
+    max-width: calc(100% - 250px);
+}
+
+/* Footer Adjustment */
+footer {
+    margin-left: 250px;
+    max-width: calc(100% - 250px);
+}
+
+
+/* Style all links as italic and white */
+a {
+    color: #ffffff;
+    font-style: italic;
+    text-decoration: none; /* Removes underline */
+}
+
+/* Optional: Add hover effect */
+a:hover {
+    color: #f0f0f0; /* Slightly lighter white on hover */
+    text-decoration: underline; /* Adds underline on hover */
 }
