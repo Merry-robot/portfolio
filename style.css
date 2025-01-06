@@ -88,6 +88,42 @@ h2 {
 .project:hover {
     transform: scale(1.02);
 }
+/* Sidebar collapsible section (default hidden on mobile) */
+.project-list {
+    display: none; /* Hidden by default */
+    background-color: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Toggle button styling */
+#toggle-projects {
+    display: none; /* Hidden by default, will show on mobile */
+    background-color: #ff9c40;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+/* Hover effect for the toggle button */
+#toggle-projects:hover {
+    background-color: #f58403;
+}
+
+/* Media query to show the toggle button on mobile */
+@media (max-width: 768px) {
+    #toggle-projects {
+        display: block;
+    }
+
+    .project-list {
+        display: block;
+    }
+}
+
 
 /* Experience Section Styling */
 .experience {

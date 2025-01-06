@@ -8,3 +8,12 @@ function changeText() {
 }
 
 setInterval(changeText, 3000);
+
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleButton = document.getElementById("toggle-projects");
+    const projectList = document.querySelector(".project-list");
+
+    toggleButton.addEventListener("click", function() {
+        projectList.style.display = projectList.style.display === "block" ? "none" : "block";
+    });
+});
