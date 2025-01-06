@@ -1,5 +1,5 @@
 const dynamicText = document.querySelector('.dynamic-text');
-const roles = ['Programmer', 'Web Developer', 'Air Traffic Enthusiast'];
+const roles = ['a Web Developer.', 'an Air Traffic Enthusiast.'];
 let roleIndex = 0;
 
 function changeText() {
@@ -9,11 +9,18 @@ function changeText() {
 
 setInterval(changeText, 3000);
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("toggle-projects");
-    const projectList = document.querySelector(".project-list");
+    const sidebar = document.getElementById("sidebar");
 
-    toggleButton.addEventListener("click", function() {
-        projectList.style.display = projectList.style.display === "block" ? "none" : "block";
+    toggleButton.addEventListener("click", function () {
+        sidebar.classList.toggle("show");
+        if (sidebar.classList.contains("show")) {
+            toggleButton.innerHTML = '<i class="fas fa-times"></i> Hide Projects';
+        } else {
+            toggleButton.innerHTML = '<i class="fas fa-bars"></i> Show Projects';
+        }
     });
 });
+
+

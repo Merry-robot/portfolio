@@ -1,162 +1,40 @@
-/* Universal Reset & Font Styling */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: "ListsFont", sans-serif;
-    scroll-behavior: smooth; /* Smooth scrolling for better navigation */
+    scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: "NameHeadingFont";
-    src: url(fonts/OldComputerSt-rGM7.ttf);
-}
-
-@font-face {
-    font-family: "ListsFont";
-    src: url(fonts/Swansea-q3pd.ttf);
-}
-
-/* Body Styling */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #000000;
-    color: #c7c7c7;
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
 }
 
-/* Header Styling */
 header {
-    background-color: #5b5b5b;
+    background-color: #333333;
     padding: 20px;
     text-align: center;
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     color: #ff9c40;
-    margin-bottom: 10px;
     font-family: "NameHeadingFont", sans-serif;
+    font-size: 2rem;
 }
 
-nav a {
-    color: #ffffff;
-    margin: 0 15px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-nav a:hover {
-    color: #f58403;
-}
-
-/* Main Content Styling */
 main {
     padding: 20px;
-    margin-left: 270px; /* Adjust for sidebar */
+    margin-left: 270px;
 }
 
-/* Section Styling */
-section {
-    margin: 40px 0;
-    padding: 20px;
-    border-radius: 8px;
-    background-color: #1e1e1e;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-    color: #f0ac46;
-    margin-bottom: 10px;
-}
-
-/* Project Cards Styling */
-.project {
-    margin: 20px 0;
-    border-radius: 8px;
-    overflow: hidden;
-    transition: transform 0.3s ease;
-}
-
-.project img {
-    width: 100%;
-    border-bottom: 2px solid #ffbc40;
-}
-
-.project:hover {
-    transform: scale(1.02);
-}
-/* Sidebar collapsible section (default hidden on mobile) */
-.project-list {
-    display: none; /* Hidden by default */
-    background-color: #2a2a2a;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-/* Toggle button styling */
-#toggle-projects {
-    display: none; /* Hidden by default, will show on mobile */
-    background-color: #ff9c40;
-    color: #ffffff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-bottom: 10px;
-}
-
-/* Hover effect for the toggle button */
-#toggle-projects:hover {
-    background-color: #f58403;
-}
-
-/* Media query to show the toggle button on mobile */
-@media (max-width: 768px) {
-    #toggle-projects {
-        display: block;
-    }
-
-    .project-list {
-        display: block;
-    }
-}
-
-
-/* Experience Section Styling */
-.experience {
-    margin: 20px 0;
-}
-
-/* Form Input & Textarea Styling */
-input, textarea {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    background-color: #1e1e1e;
-    color: #ffffff;
-    margin-bottom: 10px;
-    transition: border-color 0.3s ease;
-}
-
-input:focus, textarea:focus {
-    border-color: #ffffff;
-}
-
-/* Footer Styling */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #000000;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-}
-
-/* Sidebar Styling - Overlapping Everything */
 #sidebar {
     position: fixed;
     left: 0;
@@ -166,90 +44,121 @@ footer {
     background-color: #1e1e1e;
     color: #ffffff;
     padding: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-    z-index: 1000; /* Ensure it overlaps everything */
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out;
 }
 
-/* Main Content Adjustment to Prevent Overlap */
-main {
-    padding: 20px;
+#sidebar.show {
+    transform: translateX(0);
 }
 
-/* Sidebar Links Styling for Clarity */
 #sidebar h2 {
     text-align: center;
-    margin-bottom: 20px;
     color: #ff9c40;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 .project-item {
     margin-bottom: 20px;
     background-color: #2a2a2a;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Adjust Header to Not Interfere with Sidebar */
-header {
-    margin-left: 250px;
+.project-item h3 {
+    color: #ff9c40;
+    margin-bottom: 10px;
 }
 
-/* Footer Adjustment for Sidebar */
-footer {
-    margin-left: 250px;
+.project-item p {
+    color: #e0e0e0;
 }
 
-/* Prevent Horizontal Scrolling */
-body, html {
-    overflow-x: hidden;
-}
-
-/* Sidebar Fix */
-#sidebar {
+#toggle-projects {
+    display: none;
     position: fixed;
-    left: 0;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background-color: #1e1e1e;
+    bottom: 20px;
+    left: 20px;
+    z-index: 1500;
+    background-color: #ff9c40;
     color: #ffffff;
-    padding: 20px;
-    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
-    overflow-y: auto;
-    z-index: 1000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
 }
 
-/* Main Content Adjustment */
-main {
-    padding: 20px;
-    margin-left: 250px;
-    max-width: calc(100% - 250px);
+#toggle-projects:hover {
+    background-color: #f5a623;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Header Adjustment */
-header {
-    margin-left: 250px;
-    max-width: calc(100% - 250px);
+@media (max-width: 768px) {
+    #toggle-projects {
+        display: block;
+    }
+
+    main {
+        margin-left: 0;
+    }
 }
 
-/* Footer Adjustment */
-footer {
-    margin-left: 250px;
-    max-width: calc(100% - 250px);
-}
-
-
-/* Style all links as italic and white */
 a {
     color: #ffffff;
     font-style: italic;
-    text-decoration: none; /* Removes underline */
+    text-decoration: none;
 }
 
-/* Optional: Add hover effect */
 a:hover {
-    color: #f0f0f0; /* Slightly lighter white on hover */
-    text-decoration: underline; /* Adds underline on hover */
+    color: #f0f0f0;
+    text-decoration: underline;
+}
+
+.experience, .skills, #contact, #intro {
+    background-color: #2a2a2a;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+}
+
+.experience h3, .skills h2, #contact h2, #intro h2 {
+    color: #ff9c40;
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.experience p, .skills p, #contact p, #intro p {
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+.skills li {
+    background-color: #3a3a3a;
+    padding: 12px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+}
+
+.skills li:hover {
+    background-color: #ff9c40;
+    color: #000000;
+    transform: translateY(-2px);
 }
