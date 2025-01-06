@@ -1,3 +1,4 @@
+// Dynamic text animation
 const dynamicText = document.querySelector('.dynamic-text');
 const roles = ['a Web Developer.', 'an Air Traffic Enthusiast.'];
 let roleIndex = 0;
@@ -13,8 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const toggleButton = document.getElementById("toggle-projects");
     const sidebar = document.getElementById("sidebar");
 
+    // Show sidebar by default
+    sidebar.classList.add("show");
+
     toggleButton.addEventListener("click", function () {
         sidebar.classList.toggle("show");
+
         if (sidebar.classList.contains("show")) {
             toggleButton.innerHTML = '<i class="fas fa-times"></i> Hide Projects';
         } else {
@@ -22,5 +27,3 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
-
-
