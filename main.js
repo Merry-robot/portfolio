@@ -1,6 +1,6 @@
 // Dynamic text animation
 const dynamicText = document.querySelector('.dynamic-text');
-const roles = ['a Web Developer.', 'an Air Traffic Enthusiast.'];
+const roles = ['a Web Developer.', 'an Air Traffic Enthusiast.', 'a Musician'];
 let roleIndex = 0;
 
 function changeText() {
